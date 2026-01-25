@@ -35,7 +35,7 @@ export const projects: Project[] = [
     longDescription:
       "Comprehensive Warhammer 40,000 book database with searchable catalog of novels, authors, and series. Built with Sanity CMS for content management and Algolia for fast, filterable search.",
     date: "2024",
-    image: "/images/imperial-archive-screenshot.jpg",
+    image: "/images/imperial-archive.jpg",
     tags: ["TypeScript", "Next.js", "Sanity", "Algolia", "Convex"],
     links: {
       site: "https://imperialarchive.com/",
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     longDescription:
       "Fictional corporate website for the Black Mesa Research Facility from Half-Life. Features research articles, careers page, and corporate propaganda. A love letter to the game.",
     date: "2024",
-    image: "/images/black-mesa-screenshot.jpg",
+    image: "/images/black-mesa.jpg",
     tags: ["TypeScript", "Next.js"],
     links: {
       site: "https://blackmesa.acekisch.com/",
@@ -63,7 +63,7 @@ export const projects: Project[] = [
     longDescription:
       "Corporate site for the Weyland-Yutani Corporation from the Alien universe. Featuring mission statement, technology showcase, and subspace contact form. Building better worlds since 2024.",
     date: "2024",
-    image: "/images/weyland-yutani-screenshot.jpg",
+    image: "/images/weyland-yutani.jpg",
     tags: ["TypeScript", "Next.js"],
     links: {
       site: "https://weyland-yutani.vercel.app/",
@@ -78,7 +78,7 @@ export const projects: Project[] = [
     longDescription:
       "Interactive periodic table with detailed element information including atomic properties, electron configurations, 3D Bohr models, and Wikipedia links. Color-coded by element series.",
     date: "2024",
-    image: "/images/elementable-screenshot.jpg",
+    image: "/images/elementable.jpg",
     tags: ["TypeScript", "Next.js"],
     links: {
       site: "https://www.elementable.app/",
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     longDescription:
       "Clean tip calculator with bill splitting. Preset tip percentages with custom option, per-person breakdown for group dining.",
     date: "2024",
-    image: "/images/tipper-screenshot.jpg",
+    image: "/images/tipper.jpg",
     tags: ["TypeScript", "React"],
     links: {
       site: "https://tipper-ace.vercel.app/",
