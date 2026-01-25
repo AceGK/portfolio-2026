@@ -60,7 +60,7 @@
 
 .description {
   font-size: 0.8125rem;
-  color: hsl(0 0% 100% / 0.4);
+  color: var(--muted);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

@@ -51,9 +51,10 @@ a.imageWrapper {
 .imageWrapper {
   position: relative;
   width: 100%;
+  aspect-ratio: 16 / 9; // Add this back
   border-radius: 4px;
   overflow: hidden;
-  background: hsl(0 0% 100% / 0.03);
+  // background: hsl(0 0% 100% / 0.03);
   opacity: 0;
   animation: fade-in-up 0.35s ease-out forwards;
   animation-delay: 0.1s;
@@ -61,7 +62,8 @@ a.imageWrapper {
 
 .image {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
 }
 
 // Meta (tags + links)
