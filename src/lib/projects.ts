@@ -82,7 +82,7 @@ export const projects: Project[] = [
     tags: ["TypeScript", "Next.js"],
     links: {
       site: "https://www.elementable.app/",
-      github: "https://github.com/acegk/elementable",
+      github: "https://github.com/acegk/periodic-table",
     },
   },
   {
@@ -96,7 +96,7 @@ export const projects: Project[] = [
     tags: ["TypeScript", "React"],
     links: {
       site: "https://tipper-ace.vercel.app/",
-      github: "https://github.com/acegk/tipper",
+      github: "https://github.com/acegk/tip-calculator",
     },
   },
 ];
