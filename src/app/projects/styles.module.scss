@@ -1,0 +1,166 @@
+.main {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem 4rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 21rem;
+}
+
+// Header
+.header {
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fade-in-up 0.35s ease-out forwards;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+// Project List
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  position: relative;
+  opacity: 0;
+  animation: fade-in-up 0.35s ease-out forwards;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.projectTitle {
+  font-size: 0.9375rem;
+  color: var(--text);
+}
+
+.description {
+  font-size: 0.8125rem;
+  color: hsl(0 0% 100% / 0.4);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @media (max-width: 480px) {
+    white-space: normal;
+  }
+}
+
+.date {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+// Footer
+.footer {
+  margin-top: 3rem;
+  opacity: 0;
+  animation: fade-in-up 0.35s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+  text-transform: lowercase;
+  transition: color var(--transition-fast);
+
+  &:hover {
+    color: var(--text);
+
+    .backIcon {
+      transform: translateX(-2px);
+    }
+  }
+}
+
+.backIcon {
+  width: 1rem;
+  height: 1rem;
+  transition: transform var(--transition-fast);
+}
+
+.link {
+  position: relative; // add this
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  color: var(--muted);
+  transition: color var(--transition-fast);
+
+  &:hover {
+    color: var(--text);
+  }
+
+  // add this block
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.5;
+    transition: width var(--transition-smooth);
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: 
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
+
+  .link:hover & {
+    opacity: 0.7;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

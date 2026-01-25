@@ -1,0 +1,130 @@
+:root {
+  --bg: #0a0a0a;
+  --text: #fafafa;
+  --muted: #888;
+  --accent: #22d3ee;
+  --accent-hsl: 187 77% 52%;
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.3s ease-out;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: 
+    radial-gradient(
+      ellipse 70% 70% at 50% 50%,
+      #111 0%,
+      var(--bg) 100%
+    );
+    
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: hsl(var(--accent-hsl) / 0.2);
+}
+
+.title-minimal {
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: normal;
+  opacity: 0;
+  animation: fade-in-up 0.35s ease-out forwards;
+  text-transform: lowercase;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 400;
+  // letter-spacing: -0.02em;
+  line-height: normal;
+  opacity: 0;
+  animation: fade-in-up 0.35s ease-out forwards;
+  font-family: var(--font-old-english), serif;
+  span {
+    font-size:2.5rem;
+  }
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--muted);
+  opacity: 0;
+  animation: fade-in-up 0.35s ease-out forwards;
+  animation-delay: 0.05s;
+  display:flex;
+  align-items: center;
+  gap:0.5rem;
+}
+
+
+// ===========================================
+// Shared animation
+// ===========================================
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ===========================================
+// Link with animated underline
+// ===========================================
+
+.link-underline {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  color: var(--muted);
+  transition: color var(--transition-fast);
+
+  &:hover {
+    color: var(--text);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.5;
+    transition: width var(--transition-smooth);
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
