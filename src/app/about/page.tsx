@@ -85,8 +85,7 @@ export default function AboutPage() {
           </p>
 
           <p className={styles.paragraph}>
-            Outside of code, I&apos;m into photography, painting, music, and
-            reading. I love fantasy, sci-fi, and horror genres.
+            Beyond code: photography, painting, music, reading. Partial to fantasy, sci-fi, and horror genres.
           </p>
         </section>
 
