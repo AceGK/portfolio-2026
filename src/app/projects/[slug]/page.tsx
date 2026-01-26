@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, ExternalLink, Github } from "@/components/icons";
 import { getProjectBySlug, getAllProjectSlugs } from "@/lib/projects";
+import { Tag } from "@/components/modules/Tag";
 import styles from "./styles.module.scss";
 
 interface ProjectPageProps {
@@ -27,18 +28,15 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <header className={styles.header}>
           <h1 className="title">{project.title}</h1>
           <div className={styles.tags}>
-            {project.wip && <span className={styles.tag}>🚧 in progress</span>}
             {project.tags.map((tag) => (
-              <span key={tag} className={styles.tag}>
-                {tag}
-              </span>
+              <Tag key={tag} name={tag} />
             ))}
           </div>
           <p className="subtitle">{project.longDescription}</p>
         </header>
 
         <div className={styles.imageWrapper}>
-          {project.links.site ? (
+          {/* {project.links.site ? (
             <Link
               href={project.links.site}
               target="_blank"
@@ -57,15 +55,15 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 <ExternalLink className={styles.overlayIcon} />
               </div>
             </Link>
-          ) : (
-            <Image
-              src={project.image}
-              alt={project.title}
-              width={1920}
-              height={1080}
-              className={styles.image}
-            />
-          )}
+          ) : ( */}
+          <Image
+            src={project.image}
+            alt={project.title}
+            width={1920}
+            height={1080}
+            className={styles.image}
+          />
+          {/* )} */}
         </div>
 
         <div className={styles.meta}>

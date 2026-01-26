@@ -1,67 +1,8 @@
 import Link from "next/link";
-import {
-  ArrowLeft,
-  ArrowRight,
-  Typescript,
-  Javascript,
-  React,
-  Nextjs,
-  Node,
-  Html,
-  Css,
-  Sass,
-  Tailwind,
-  Git,
-  Vercel,
-  Sanity,
-  Firebase,
-  Mongodb,
-  Algolia,
-  Aws,
-  Figma,
-  Convex,
-  Photoshop,
-  Lightroom,
-  Illustrator,
-} from "@/components/icons";
+import { ArrowLeft, ArrowRight } from "@/components/icons";
 import styles from "./styles.module.scss";
 
-const skills = [
-  {
-    label: "dev",
-    items: [
-      { name: "TypeScript", icon: Typescript },
-      { name: "React", icon: React },
-      { name: "Next.js", icon: Nextjs },
-      { name: "Node.js", icon: Node },
-      // { name: "HTML", icon: Html },
-      // { name: "CSS", icon: Css },
-      { name: "SCSS", icon: Sass },
-      { name: "Tailwind", icon: Tailwind },
-      { name: "Git", icon: Git },
-      { name: "Vercel", icon: Vercel },
-    ],
-  },
-  {
-    label: "data",
-    items: [
-      { name: "AWS", icon: Aws },
-      { name: "Sanity", icon: Sanity },
-      { name: "Algolia", icon: Algolia },
-      { name: "Convex", icon: Convex },
-      { name: "Firebase", icon: Firebase },
-      { name: "MongoDB", icon: Mongodb },
-    ],
-  },
-  {
-    label: "design",
-    items: [
-      { name: "Figma", icon: Figma },
-      { name: "Photoshop", icon: Photoshop },
-      { name: "Illustrator", icon: Illustrator },
-    ],
-  },
-];
+import { skillGroups, getSkillIcon } from "@/lib/skills";
 
 export default function AboutPage() {
   return (
@@ -85,14 +26,15 @@ export default function AboutPage() {
           </p>
 
           <p className={styles.paragraph}>
-            Beyond code: photography, painting, music, reading. Partial to fantasy, sci-fi, and horror genres.
+            Beyond code: photography, painting, music, reading. Partial to
+            fantasy, sci-fi, and horror genres.
           </p>
         </section>
 
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>skills</h2>
           <div className={styles.skills}>
-            {skills.map((group, index) => (
+            {skillGroups.map((group, index) => (
               <div
                 key={group.label}
                 className={styles.skillGroup}
@@ -100,12 +42,15 @@ export default function AboutPage() {
               >
                 <span className={styles.skillLabel}>{group.label}</span>
                 <div className={styles.skillIcons}>
-                  {group.items.map((skill) => (
-                    <div key={skill.name} className={styles.skillItem}>
-                      <skill.icon className={styles.skillIcon} />
-                      <span className={styles.skillName}>{skill.name}</span>
-                    </div>
-                  ))}
+                  {group.items.map((name) => {
+                    const Icon = getSkillIcon(name);
+                    return (
+                      <div key={name} className={styles.skillItem}>
+                        {Icon && <Icon className={styles.skillIcon} />}
+                        <span className={styles.skillName}>{name}</span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             ))}

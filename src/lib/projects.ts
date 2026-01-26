@@ -6,7 +6,6 @@ export interface Project {
   date: string;
   image: string;
   tags: string[];
-  wip?: boolean;
   links: {
     site?: string;
     github?: string;
@@ -27,8 +26,7 @@ export const projects: Project[] = [
       site: "https://plpcsanjose.com/",
     },
   },
-  {
-    wip: true,
+    {
     slug: "imperial-archive",
     title: "Imperial Archive",
     description: "WH40K book database",
@@ -36,14 +34,13 @@ export const projects: Project[] = [
       "Comprehensive Warhammer 40,000 book database with searchable catalog of novels, authors, and series. Built with Sanity CMS for content management and Algolia for fast, filterable search.",
     date: "2024",
     image: "/images/imperial-archive.jpg",
-    tags: ["TypeScript", "Next.js", "Sanity", "Algolia", "Convex"],
+    tags: ["🚧 in progress", "TypeScript", "Next.js", "Sanity", "Algolia", "Convex"],
     links: {
       site: "https://imperialarchive.com/",
       github: "https://github.com/acegk/imperial-archive",
     },
   },
-    {
-    wip: true,
+  {
     slug: "elementable",
     title: "Elementable",
     description: "Periodic table",
@@ -51,7 +48,7 @@ export const projects: Project[] = [
       "Interactive periodic table with detailed element information including atomic properties, electron configurations, 3D Bohr models, and Wikipedia links. Color-coded by element series.",
     date: "2024",
     image: "/images/elementable.jpg",
-    tags: ["TypeScript", "Next.js"],
+    tags: ["🚧 in progress", "TypeScript", "Next.js"],
     links: {
       site: "https://www.elementable.app/",
       github: "https://github.com/acegk/periodic-table",

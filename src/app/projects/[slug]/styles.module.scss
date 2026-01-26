@@ -17,13 +17,24 @@
 // Header
 .header {
   margin-bottom: 1.5rem;
-  opacity: 0;
-  animation: fade-in-up 0.35s ease-out forwards;
+
   h1 {
     margin-bottom: 1rem;
-    font-size:3rem;
-    line-height:1.1;
+    font-size: 3rem;
+    line-height: 1.1;
+    opacity: 0;
+    animation: fade-in-up 0.35s ease-out forwards;
   }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+  opacity: 0;
+  animation: fade-in-up 0.35s ease-out forwards;
+  animation-delay: 0.05s;
 }
 
 .description {
@@ -31,6 +42,9 @@
   font-size: 0.875rem;
   color: var(--muted);
   line-height: 1.6;
+  opacity: 0;
+  animation: fade-in-up 0.35s ease-out forwards;
+  animation-delay: 0.1s;
 }
 
 // Image
