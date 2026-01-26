@@ -20,10 +20,11 @@
 
   h1 {
     margin-bottom: 1rem;
-    font-size: 3rem;
+    font-size: 2.75rem;
     line-height: 1.1;
     opacity: 0;
     animation: fade-in-up 0.35s ease-out forwards;
+    text-wrap:balance;
   }
 }
 
@@ -136,6 +137,7 @@
 .links {
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .link {
