@@ -73,9 +73,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 href={project.links.site}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.link}
+                className={`link-underline-muted ${styles.link}`}
               >
-                <ExternalLink className={styles.linkIcon} />
+                <ExternalLink className="link-icon-static" />
                 visit site
               </Link>
             )}
@@ -84,9 +84,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 href={project.links.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.link}
+                className={`link-underline-muted ${styles.link}`}
               >
-                <Github className={styles.linkIcon} />
+                <Github className="link-icon-static" />
                 source
               </Link>
             )}

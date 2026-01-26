@@ -16,19 +16,14 @@
 
 // Header
 .header {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   opacity: 0;
   animation: fade-in-up 0.35s ease-out forwards;
   h1 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size:3rem;
+    line-height:1.1;
   }
-}
-
-.title {
-  font-size: 1.25rem;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  // text-transform: lowercase;
 }
 
 .description {
@@ -79,10 +74,10 @@ a.imageWrapper {
 
 .tags {
   display: flex;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
   gap: 0.5rem;
   padding-bottom: 1rem;
-    animation: fade-in-up 0.35s ease-out forwards;
+  animation: fade-in-up 0.35s ease-out forwards;
 }
 
 .tag {
@@ -101,39 +96,11 @@ a.imageWrapper {
 }
 
 .link {
-  position: relative;
   display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  color: var(--muted);
+  gap: 0.375rem;
+  font-size: 0.875rem;      
   text-transform: lowercase;
-  transition: color var(--transition-fast);
-
-  &:hover {
-    color: var(--text);
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: var(--accent);
-    opacity: 0.5;
-    transition: width var(--transition-smooth);
-  }
-
-  &:hover::after {
-    width: 100%;
-  }
-}
-
-.linkIcon {
-  width: 1rem;
-  height: 1rem;
+  justify-content: flex-start;
 }
 
 // Footer

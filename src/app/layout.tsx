@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, UnifrakturMaguntia, Grenze_Gotisch } from "next/font/google";
+import { Geist, Geist_Mono, Grenze_Gotisch } from "next/font/google";
 import "@/styles/globals.scss";
 import "@/styles/_variables.scss";
 
@@ -20,8 +20,22 @@ const oldEnglish = Grenze_Gotisch({
 });
 
 export const metadata: Metadata = {
-  title: "Ace - Software Engineer",
-  description: "Portfolio of Ace, a software engineer specializing in full-stack web development and modern web technologies.",
+  title: "Ace",
+  description:
+    "Full-stack web developer specializing in React, Next.js, and TypeScript.",
+
+  icons: {
+    icon: [
+      {
+        url: "/favicon-dark.png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/favicon-light.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -31,7 +45,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${oldEnglish.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${oldEnglish.variable}`}
+      >
         <div className="page">{children}</div>
       </body>
     </html>

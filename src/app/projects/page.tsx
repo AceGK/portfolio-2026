@@ -21,7 +21,7 @@ export default function ProjectsPage() {
             >
               <Link
                 href={`/projects/${project.slug}`}
-                className={styles.link}
+                className="nav-link"
               >
                 <div className={styles.content}>
                   <span className={styles.projectTitle}>{project.title}</span>
@@ -29,7 +29,7 @@ export default function ProjectsPage() {
                     {project.description}
                   </span>
                 </div>
-                <ChevronRight className={styles.icon} />
+                <ChevronRight className="link-icon" />
               </Link>
             </li>
           ))}

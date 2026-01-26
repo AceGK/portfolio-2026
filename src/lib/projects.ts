@@ -42,34 +42,6 @@ export const projects: Project[] = [
       github: "https://github.com/acegk/imperial-archive",
     },
   },
-  {
-    slug: "black-mesa",
-    title: "Black Mesa Research Facility",
-    description: "Working toward a better tomorrow",
-    longDescription:
-      "Fictional corporate website for the Black Mesa Research Facility from Half-Life. Features research articles, careers page, and corporate propaganda. A love letter to the game.",
-    date: "2024",
-    image: "/images/black-mesa.jpg",
-    tags: ["TypeScript", "Next.js"],
-    links: {
-      site: "https://blackmesa.acekisch.com/",
-      github: "https://github.com/acegk/black-mesa",
-    },
-  },
-  {
-    slug: "weyland-yutani",
-    title: "Weyland Yutani Corporation",
-    description: "Building better worlds",
-    longDescription:
-      "Corporate site for the Weyland-Yutani Corporation from the Alien universe. Featuring mission statement, technology showcase, and subspace contact form. Building better worlds since 2024.",
-    date: "2024",
-    image: "/images/weyland-yutani.jpg",
-    tags: ["TypeScript", "Next.js"],
-    links: {
-      site: "https://weyland-yutani.vercel.app/",
-      github: "https://github.com/acegk/weyland-yutani",
-    },
-  },
     {
     wip: true,
     slug: "elementable",
@@ -97,6 +69,34 @@ export const projects: Project[] = [
     links: {
       site: "https://tipper-ace.vercel.app/",
       github: "https://github.com/acegk/tip-calculator",
+    },
+  },
+  {
+    slug: "black-mesa",
+    title: "Black Mesa Research Facility",
+    description: "Working toward a better tomorrow",
+    longDescription:
+      "Fictional corporate website for the Black Mesa Research Facility from Half-Life. Features research articles, careers page, and corporate propaganda. A love letter to the game.",
+    date: "2024",
+    image: "/images/black-mesa.jpg",
+    tags: ["TypeScript", "Next.js"],
+    links: {
+      site: "https://blackmesa.acekisch.com/",
+      github: "https://github.com/acegk/black-mesa",
+    },
+  },
+  {
+    slug: "weyland-yutani",
+    title: "Weyland Yutani",
+    description: "Building better worlds",
+    longDescription:
+      "Corporate site for the Weyland-Yutani Corporation from the Alien universe. Featuring mission statement, technology showcase, and subspace contact form. Building better worlds since 2024.",
+    date: "2024",
+    image: "/images/weyland-yutani.jpg",
+    tags: ["TypeScript", "Next.js"],
+    links: {
+      site: "https://weyland-yutani.vercel.app/",
+      github: "https://github.com/acegk/weyland-yutani",
     },
   },
 ];

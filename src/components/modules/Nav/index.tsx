@@ -11,13 +11,13 @@ export default function Nav() {
       <nav>
         <ul className={styles.nav}>
           <li>
-            <Link href="/projects" className="link-underline">
-              Projects <ChevronRight className={styles.icon} />
+            <Link href="/projects" className="nav-link">
+              Projects <ChevronRight className="link-icon" />
             </Link>
           </li>
           <li>
-            <Link href="/about" className="link-underline">
-              About <ChevronRight className={styles.icon} />
+            <Link href="/about" className="nav-link">
+              About <ChevronRight className="link-icon" />
             </Link>
           </li>
           <li>
@@ -25,14 +25,14 @@ export default function Nav() {
               href="https://github.com/acegk"
               target="_blank"
               rel="noopener noreferrer"
-              className="link-underline"
+              className="nav-link"
             >
-              Github <ExternalLink className={styles.icon} />
+              Github <ExternalLink className="link-icon" />
             </Link>
           </li>
           <li>
-            <Link href="https://www.linkedin.com/in/acekisch/" target="_blank" rel="noopener noreferrer" className="link-underline">
-              LinkedIn <ExternalLink className={styles.icon} />
+            <Link href="https://www.linkedin.com/in/acekisch/" target="_blank" rel="noopener noreferrer" className="nav-link">
+              LinkedIn <ExternalLink className="link-icon" />
             </Link>
           </li>
         </ul>
