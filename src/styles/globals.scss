@@ -108,10 +108,6 @@ a {
   color: var(--muted);
   transition: color var(--transition-fast);
 
-  &:hover {
-    color: var(--text);
-  }
-
   &::after {
     content: "";
     position: absolute;
@@ -124,12 +120,18 @@ a {
     transition: width var(--transition-smooth);
   }
 
-  &:hover::after {
-    width: 100%;
+  @media (hover: hover) {
+    &:hover {
+      color: var(--text);
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 }
 
-// Variant: muted text that doesn't change on hover
+// Variant
 .link-underline-muted {
   position: relative;
   display: flex;
@@ -138,10 +140,6 @@ a {
   padding: 0;
   color: var(--muted);
   transition: color var(--transition-fast);
-
-  &:hover {
-    color: var(--text);
-  }
 
   &::after {
     content: "";
@@ -155,10 +153,17 @@ a {
     transition: width var(--transition-smooth);
   }
 
-  &:hover::after {
-    width: 100%;
+  @media (hover: hover) {
+    &:hover {
+      color: var(--text);
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 }
+
 
 // ===========================================
 // Link icon (slides in on hover)
@@ -173,11 +178,13 @@ a {
     opacity var(--transition-fast),
     transform var(--transition-fast);
 
-  a:hover &,
-  .link-underline:hover &,
-  .link-underline-muted:hover & {
-    opacity: 0.7;
-    transform: translateX(0);
+  @media (hover: hover) {
+    a:hover &,
+    .link-underline:hover &,
+    .link-underline-muted:hover & {
+      opacity: 0.7;
+      transform: translateX(0);
+    }
   }
 }
 

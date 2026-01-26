@@ -43,7 +43,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               href={project.links.site}
               target="_blank"
               rel="noopener noreferrer"
-              className={styles.imageWrapper}
+              className={styles.imageLink}
             >
               <Image
                 src={project.image}
@@ -52,17 +52,18 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 height={1080}
                 className={styles.image}
               />
+              <div className={styles.imageOverlay}>
+                <ExternalLink className={styles.overlayIcon} />
+              </div>
             </Link>
           ) : (
-            <div className={styles.imageWrapper}>
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={1920}
-                height={1080}
-                className={styles.image}
-              />
-            </div>
+            <Image
+              src={project.image}
+              alt={project.title}
+              width={1920}
+              height={1080}
+              className={styles.image}
+            />
           )}
         </div>
 

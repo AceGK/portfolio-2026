@@ -21,7 +21,7 @@ export const projects: Project[] = [
     longDescription:
       "E-commerce platform for a San Jose cannabis dispensary. Built using Next.js, Sanity CMS, AWS Cognito, Jane Roots headless e-commerce, Algolia Instant Search, Google Maps API, Leaflet.js, and Swiper.js.",
     date: "2024",
-    image: "/images/purple-lotus-screenshot.jpg",
+    image: "/images/purple-lotus.jpg",
     tags: ["TypeScript", "Next.js", "Sanity", "Algolia"],
     links: {
       site: "https://plpcsanjose.com/",
