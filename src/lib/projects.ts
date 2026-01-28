@@ -45,7 +45,7 @@ export const projects: Project[] = [
     title: "Elementable",
     description: "Periodic table",
     longDescription:
-      "Interactive periodic table with detailed element information including atomic properties, electron configurations, 3D Bohr models, and Wikipedia links. Color-coded by element series.",
+      "Interactive periodic table with detailed element information including atomic properties, electron configurations, 3D Bohr models, and more.",
     date: "2024",
     image: "/images/elementable.jpg",
     tags: ["🚧 in progress", "TypeScript", "Next.js"],
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     title: "Tipper",
     description: "Tip calculator",
     longDescription:
-      "Clean tip calculator with bill splitting. Preset tip percentages with custom option, per-person breakdown for group dining.",
+      "Tip calculator with bill splitting. Preset tip percentages with custom option, per-person breakdown for group dining.",
     date: "2024",
     image: "/images/tipper.jpg",
     tags: ["TypeScript", "React"],
@@ -73,7 +73,7 @@ export const projects: Project[] = [
     title: "Black Mesa Research Facility",
     description: "Working toward a better tomorrow",
     longDescription:
-      "Fictional corporate website for the Black Mesa Research Facility from Half-Life. Features research articles, careers page, and corporate propaganda. A love letter to the game.",
+      "Fictional corporate website for the Black Mesa Research Facility from the Half-Life series. A love letter to the game.",
     date: "2024",
     image: "/images/black-mesa.jpg",
     tags: ["TypeScript", "Next.js"],
@@ -87,7 +87,7 @@ export const projects: Project[] = [
     title: "Weyland Yutani",
     description: "Building better worlds",
     longDescription:
-      "Corporate site for the Weyland-Yutani Corporation from the Alien universe. Featuring mission statement, technology showcase, and subspace contact form. Building better worlds since 2024.",
+      "Fictional corporate website for Weyland-Yutani, the infamous megacorporation from the Alien franchise.",
     date: "2024",
     image: "/images/weyland-yutani.jpg",
     tags: ["TypeScript", "Next.js"],
