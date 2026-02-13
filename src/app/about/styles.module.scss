@@ -11,7 +11,7 @@
 
 .container {
   width: 100%;
-  max-width: 28rem;
+  max-width: 27rem;
 }
 
 // Header
@@ -19,50 +19,8 @@
   margin-bottom: 2rem;
 }
 
-.title {
-  opacity: 0;
-  animation: fade-in-up 0.35s ease-out forwards;
-}
-
-.subtitle {
-  opacity: 0;
-  animation: fade-in-up 0.35s ease-out forwards;
-  animation-delay: 0.05s;
-}
-
-// Content
-.content {
-  opacity: 0;
-  animation: fade-in-up 0.35s ease-out forwards;
-  animation-delay: 0.1s;
-}
-
-.paragraph {
-  font-size: 0.875rem;
-  color: var(--muted);
-  line-height: 1.7;
-  margin-bottom: 1.25rem;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
 
 // Skills Section
-.section {
-  margin-top: 2.5rem;
-}
-
-.sectionTitle {
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: var(--text);
-  margin-bottom: 1.25rem;
-  text-transform: lowercase;
-  opacity: 0;
-  animation: fade-in-up 0.35s ease-out forwards;
-  animation-delay: 0.2s;
-}
 
 .skills {
   display: flex;
@@ -74,16 +32,13 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  opacity: 0;
-  animation: fade-in-up 0.35s ease-out forwards;
-  // animation-delay set via inline style
 }
 
 .skillLabel {
   font-size: 0.75rem;
   color: var(--accent);
-  text-transform: lowercase;
   letter-spacing: 0.02em;
+  text-transform: lowercase;
 }
 
 .skillIcons {
@@ -101,7 +56,7 @@
   border: 1px solid hsl(0 0% 100% / 0.06);
   border-radius: 4px;
   cursor: default;
-  transition: 
+  transition:
     border-color var(--transition-fast),
     background var(--transition-fast);
 
@@ -114,7 +69,7 @@
 .skillIcon {
   width: 0.875rem;
   height: 0.875rem;
-  color: var(--muted);
+  color: var(--tag);
   transition: color var(--transition-fast);
 
   .skillItem:hover & {
@@ -124,53 +79,10 @@
 
 .skillName {
   font-size: 0.75rem;
-  color: var(--muted);
+  color: var(--tag);
   transition: color var(--transition-fast);
 
   .skillItem:hover & {
     color: var(--text);
-  }
-}
-
-// Footer
-.footer {
-  margin-top: 3rem;
-  opacity: 0;
-  animation: fade-in-up 0.35s ease-out forwards;
-  animation-delay: 0.5s;
-}
-
-.back {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  color: var(--muted);
-  text-transform: lowercase;
-  transition: color var(--transition-fast);
-
-  &:hover {
-    color: var(--text);
-
-    .backIcon {
-      transform: translateX(-2px);
-    }
-  }
-}
-
-.backIcon {
-  width: 1rem;
-  height: 1rem;
-  transition: transform var(--transition-fast);
-}
-
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

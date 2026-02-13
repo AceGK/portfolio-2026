@@ -1,46 +1,33 @@
-import Link from "next/link";
-import { ArrowLeft, ChevronRight } from "@/components/icons";
 import { projects } from "@/lib/projects";
+import { ListNav } from "@/components/ui/ListNav";
+import { BackLink } from "@/components/ui/BackLink";
 import styles from "./styles.module.scss";
 
 export default function ProjectsPage() {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <header className={styles.header}>
-          <h1 className="title">P<span>rojects</span></h1>
-          <p className="subtitle">selected work</p>
-        </header>
+        <BackLink href="/" className="fade-in-up" />
 
-        <ul className={styles.list}>
-          {projects.map((project, index) => (
-            <li
-              key={project.slug}
-              className={styles.item}
-              style={{ animationDelay: `${0.1 + index * 0.05}s` }}
-            >
-              <Link
-                href={`/projects/${project.slug}`}
-                className="nav-link"
-              >
-                <div className={styles.content}>
-                  <span className={styles.projectTitle}>{project.title}</span>
-                  <span className={styles.description}>
-                    {project.description}
-                  </span>
-                </div>
-                <ChevronRight className="link-icon" />
-              </Link>
-            </li>
-          ))}
-        </ul>
 
-        <footer className={styles.footer}>
-          <Link href="/" className={styles.back}>
-            <ArrowLeft className={styles.backIcon} />
-            back
-          </Link>
-        </footer>
+          <h1 className="title fade-in-up">
+            P<span>rojects</span>
+          </h1>
+          <p
+            className="subtitle fade-in-up"
+            style={{ animationDelay: "0.05s" }}
+          >
+            Featured Work
+          </p>
+
+
+        <ListNav
+          items={projects.map((p) => ({
+            label: p.title,
+            description: p.description,
+            href: `/projects/${p.slug}`,
+          }))}
+        />
       </div>
     </main>
   );

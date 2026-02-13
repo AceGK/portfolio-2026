@@ -48,15 +48,15 @@ export const skillsMap: Record<string, ComponentType<SVGProps<SVGSVGElement>>> =
 // Grouped skills for the about page
 export const skillGroups = [
   {
-    label: "dev",
+    label: "Dev",
     items: ["TypeScript", "React", "Next.js", "Node.js", "SCSS", "Tailwind", "Git", "Vercel"],
   },
   {
-    label: "data",
+    label: "Data",
     items: ["AWS", "Sanity", "Algolia", "Convex", "Firebase", "MongoDB"],
   },
   {
-    label: "design",
+    label: "Design",
     items: ["Figma", "Photoshop", "Illustrator"],
   },
 ];

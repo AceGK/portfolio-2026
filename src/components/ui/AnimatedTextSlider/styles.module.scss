@@ -1,0 +1,30 @@
+.slider {
+  position: relative;
+  height: 1.5em;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slide {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  transform: translateY(100%);
+  opacity: 0;
+
+  &[data-state="current"] {
+    transform: translateY(0);
+    opacity: 1;
+    transition:
+      transform ease-in-out,
+      opacity ease-in-out;
+  }
+
+  &[data-state="prev"] {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition:
+      transform ease-in-out,
+      opacity ease-in-out;
+  }
+}

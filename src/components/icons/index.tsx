@@ -6,6 +6,7 @@ export {
   LuExternalLink as ExternalLink,
   LuArrowLeft as ArrowLeft,
   LuArrowRight as ArrowRight,
+  LuMoveRight as MoveRight,
   LuMenu as Menu,
   LuX as X,
   LuMail as Mail,
