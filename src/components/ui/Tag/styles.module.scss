@@ -34,3 +34,23 @@
 .name, .icon {
   transition: color var(--transition-fast);
 }
+
+// TagGroup
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.groupLabel {
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+}
+
+.groupItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}

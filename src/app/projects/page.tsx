@@ -9,17 +9,12 @@ export default function ProjectsPage() {
       <div className={styles.container}>
         <BackLink href="/" className="fade-in-up" />
 
-
-          <h1 className="title fade-in-up">
-            P<span>rojects</span>
-          </h1>
-          <p
-            className="subtitle fade-in-up"
-            style={{ animationDelay: "0.05s" }}
-          >
-            Featured Work
-          </p>
-
+        <h1 className="title fade-in-up">
+          P<span>rojects</span>
+        </h1>
+        <p className="subtitle fade-in-up" style={{ animationDelay: "0.05s" }}>
+          Featured Work
+        </p>
 
         <ListNav
           items={projects.map((p) => ({

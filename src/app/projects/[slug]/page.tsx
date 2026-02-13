@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ExternalLink, Github } from "@/components/icons";
 import { getProjectBySlug, getAllProjectSlugs } from "@/lib/projects";
 import { Tag } from "@/components/ui/Tag";
+import { TagGroup } from "@/components/ui/Tag/TagGroup";
 import { BackLink } from "@/components/ui/BackLink";
 import styles from "./styles.module.scss";
 
@@ -43,17 +44,18 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             width={1920}
             height={1080}
             className={styles.image}
+            priority
           />
         </div>
 
-        <div
-          className={`${styles.tags} fade-in-up`}
-          style={{ animationDelay: "0.1s" }}
+        <TagGroup
+          className="fade-in-up"
+          style={{ animationDelay: "0.1s", paddingBottom: "1rem" }}
         >
           {project.tags.map((tag) => (
             <Tag key={tag} name={tag} />
           ))}
-        </div>
+        </TagGroup>
         <p
           className="fade-in-up"
           style={{ animationDelay: "0.15s" }}
@@ -62,33 +64,31 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </p>
 
         <div
-          className={`${styles.meta} fade-in-up`}
+          className={`${styles.links} fade-in-up`}
           style={{ animationDelay: "0.2s" }}
         >
-          <div className={styles.links}>
-            {project.links.site && (
-              <Link
-                href={project.links.site}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`link-underline-muted ${styles.link}`}
-              >
-                <ExternalLink className="link-icon-static" />
-                visit site
-              </Link>
-            )}
-            {project.links.github && (
-              <Link
-                href={project.links.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`link-underline-muted ${styles.link}`}
-              >
-                <Github className="link-icon-static" />
-                source
-              </Link>
-            )}
-          </div>
+          {project.links.site && (
+            <Link
+              href={project.links.site}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`link-underline-muted ${styles.link}`}
+            >
+              <ExternalLink className="link-icon-static" />
+              visit site
+            </Link>
+          )}
+          {project.links.github && (
+            <Link
+              href={project.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`link-underline-muted ${styles.link}`}
+            >
+              <Github className="link-icon-static" />
+              source
+            </Link>
+          )}
         </div>
       </div>
     </main>
