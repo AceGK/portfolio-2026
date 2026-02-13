@@ -2,6 +2,7 @@ import { MoveRight } from "@/components/icons";
 import { Separator } from "@/components/ui/Separator";
 import { BackLink } from "@/components/ui/BackLink";
 import { Tag } from "@/components/ui/Tag";
+import { PageHeading } from "@/components/ui/PageHeading";
 import { TagGroup } from "@/components/ui/Tag/TagGroup";
 import styles from "./styles.module.scss";
 
@@ -13,9 +14,9 @@ export default function AboutPage() {
       <div className={styles.container}>
         <BackLink href="/" className="fade-in-up" />
 
-        <h1 className="title fade-in-up">
+        <PageHeading>
           A<span>bout</span>
-        </h1>
+        </PageHeading>
         <p className="subtitle fade-in-up" style={{ animationDelay: "0.05s" }}>
           New York
           <MoveRight /> San Jose
@@ -39,11 +40,12 @@ export default function AboutPage() {
           style={{ margin: "2rem 0", animationDelay: "0.15s" }}
         />
 
-        <section className={styles.skills}>
+
           {skillGroups.map((group, index) => (
             <TagGroup
               key={group.label}
               label={group.label}
+              spacing="1.5rem"
               className="fade-in-up"
               style={{ animationDelay: `${0.2 + index * 0.1}s` }}
             >
@@ -52,7 +54,7 @@ export default function AboutPage() {
               ))}
             </TagGroup>
           ))}
-        </section>
+  
       </div>
     </main>
   );

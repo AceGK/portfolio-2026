@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ExternalLink, Github } from "@/components/icons";
 import { getProjectBySlug, getAllProjectSlugs } from "@/lib/projects";
 import { Tag } from "@/components/ui/Tag";
+import { PageHeading } from "@/components/ui/PageHeading";
 import { TagGroup } from "@/components/ui/Tag/TagGroup";
 import { BackLink } from "@/components/ui/BackLink";
 import styles from "./styles.module.scss";
@@ -33,7 +34,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           className="fade-in-up"
         />
 
-        <h1 className="title fade-in-up">{project.title}</h1>
+        <PageHeading fontSize="2.75rem">{project.title}</PageHeading>
         <div
           className={`${styles.imageWrapper} fade-in-up`}
           style={{ animationDelay: "0.05s" }}
@@ -50,7 +51,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
         <TagGroup
           className="fade-in-up"
-          style={{ animationDelay: "0.1s", paddingBottom: "1rem" }}
+          style={{ animationDelay: "0.1s" }}
         >
           {project.tags.map((tag) => (
             <Tag key={tag} name={tag} />

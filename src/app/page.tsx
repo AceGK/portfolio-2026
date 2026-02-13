@@ -1,4 +1,5 @@
 import { AnimatedTextSlider } from "@/components/ui/AnimatedTextSlider";
+import { PageHeading } from "@/components/ui/PageHeading";
 import styles from "./styles.module.scss";
 import { ListNav } from "@/components/ui/ListNav";
 
@@ -6,9 +7,9 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <h1 className="title fade-in-up">
+        <PageHeading>
           A<span>ce</span> K<span>isch</span>
-        </h1>
+        </PageHeading>
         <AnimatedTextSlider
           texts={[
             "Software Engineer",

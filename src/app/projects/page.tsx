@@ -1,5 +1,6 @@
 import { projects } from "@/lib/projects";
 import { ListNav } from "@/components/ui/ListNav";
+import { PageHeading } from "@/components/ui/PageHeading";
 import { BackLink } from "@/components/ui/BackLink";
 import styles from "./styles.module.scss";
 
@@ -9,9 +10,9 @@ export default function ProjectsPage() {
       <div className={styles.container}>
         <BackLink href="/" className="fade-in-up" />
 
-        <h1 className="title fade-in-up">
+        <PageHeading>
           P<span>rojects</span>
-        </h1>
+        </PageHeading>
         <p className="subtitle fade-in-up" style={{ animationDelay: "0.05s" }}>
           Featured Work
         </p>

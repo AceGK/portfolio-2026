@@ -63,8 +63,8 @@ export const projects: Project[] = [
   },
   {
     slug: "black-mesa",
-    title: "Black Mesa Research Facility",
-    description: "Working toward a better tomorrow",
+    title: "Black Mesa",
+    description: "Research Facility",
     longDescription:
       "Fictional corporate website for the Black Mesa Research Facility from the Half-Life series. A love letter to the game.",
     date: "2024",
