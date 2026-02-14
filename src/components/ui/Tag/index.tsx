@@ -1,4 +1,4 @@
-import { getSkillIcon } from "@/lib/skills";
+import { getSkillIcon, getSkillColor } from "@/lib/skills";
 import styles from "./styles.module.scss";
 
 interface TagProps {
@@ -17,9 +17,13 @@ export function Tag({ name, showIcon = true, variant = "default" }: TagProps) {
   }
 
   const Icon = getSkillIcon(name);
+  const color = getSkillColor(name);
 
   return (
-    <span className={styles.tag}>
+    <span
+      className={styles.tag}
+      style={color ? { "--brand-color": color } as React.CSSProperties : undefined}
+    >
       {showIcon && Icon && <Icon className={styles.icon} />}
       <span className={styles.name}>{name}</span>
     </span>

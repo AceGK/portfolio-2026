@@ -15,10 +15,13 @@
 
   @media (hover: hover) {
     &:hover {
-      border-color: hsl(0 0% 100% / 0.12);
+      border-color: var(--brand-color, hsl(0 0% 100% / 0.12));
       background: hsl(0 0% 100% / 0.05);
 
-      .icon,
+      .icon {
+        color: var(--brand-color, var(--text));
+      }
+
       .name {
         color: var(--text);
       }

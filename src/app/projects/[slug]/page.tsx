@@ -1,12 +1,14 @@
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+
 import { ExternalLink, Github } from "@/components/icons";
-import { getProjectBySlug, getAllProjectSlugs } from "@/lib/projects";
-import { Tag } from "@/components/ui/Tag";
-import { PageHeading } from "@/components/ui/PageHeading";
-import { TagGroup } from "@/components/ui/Tag/TagGroup";
 import { BackLink } from "@/components/ui/BackLink";
+import { PageHeading } from "@/components/ui/PageHeading";
+import { Tag } from "@/components/ui/Tag";
+import { TagGroup } from "@/components/ui/Tag/TagGroup";
+import { getProjectBySlug, getAllProjectSlugs } from "@/lib/projects";
+
 import styles from "./styles.module.scss";
 
 interface ProjectPageProps {
@@ -26,15 +28,16 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <main className={styles.main}>
-      <div className={styles.container}>
+    <main>
+      <div style={{width: "100%", maxWidth: "29rem"}}>
         <BackLink
           href="/projects"
           label="back to projects"
           className="fade-in-up"
         />
 
-        <PageHeading fontSize="2.75rem">{project.title}</PageHeading>
+        <PageHeading fontSize="2.75rem" spacing="0.5rem">{project.title}</PageHeading>
+
         <div
           className={`${styles.imageWrapper} fade-in-up`}
           style={{ animationDelay: "0.05s" }}
@@ -57,6 +60,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <Tag key={tag} name={tag} />
           ))}
         </TagGroup>
+
         <p
           className="fade-in-up"
           style={{ animationDelay: "0.15s" }}

@@ -1,12 +1,11 @@
 import { AnimatedTextSlider } from "@/components/ui/AnimatedTextSlider";
-import { PageHeading } from "@/components/ui/PageHeading";
-import styles from "./styles.module.scss";
 import { ListNav } from "@/components/ui/ListNav";
+import { PageHeading } from "@/components/ui/PageHeading";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.container}>
+    <main>
+      <div style={{width: "100%", maxWidth: "16rem"}}>
         <PageHeading>
           A<span>ce</span> K<span>isch</span>
         </PageHeading>

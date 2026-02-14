@@ -21,7 +21,7 @@ export const projects: Project[] = [
       "E-commerce platform for a San Jose cannabis dispensary. Built using Next.js, Sanity CMS, AWS Cognito, Jane Roots headless e-commerce, Algolia Instant Search, Google Maps API, Leaflet.js, and Swiper.js.",
     date: "2024",
     image: "/images/purple-lotus.jpg",
-    tags: ["TypeScript", "Next.js", "Sanity", "Algolia"],
+    tags: ["TypeScript", "Next.js", "Sanity", "Algolia", "AWS", "Leaflet", "Swiper"],
     links: {
       site: "https://plpcsanjose.com/",
     },
@@ -55,7 +55,7 @@ export const projects: Project[] = [
       "Fictional cannabis brand set in Tolkien's Middle-earth. Complete with strains, retailer map, character reviews, and parody press logos.",
     date: "2024",
     image: "/images/the-shire.jpg",
-    tags: ["🚧 in progress","TypeScript", "Next.js", "Leaflet.js"],
+    tags: ["🚧 in progress", "TypeScript", "Next.js", "Leaflet.js"],
     links: {
       site: "https://the-shire.vercel.app/",
       github: "https://github.com/acegk/the-shire",

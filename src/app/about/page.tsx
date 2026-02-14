@@ -1,17 +1,15 @@
 import { MoveRight } from "@/components/icons";
-import { Separator } from "@/components/ui/Separator";
 import { BackLink } from "@/components/ui/BackLink";
-import { Tag } from "@/components/ui/Tag";
 import { PageHeading } from "@/components/ui/PageHeading";
+import { Separator } from "@/components/ui/Separator";
+import { Tag } from "@/components/ui/Tag";
 import { TagGroup } from "@/components/ui/Tag/TagGroup";
-import styles from "./styles.module.scss";
-
 import { skillGroups } from "@/lib/skills";
 
 export default function AboutPage() {
   return (
-    <main className={styles.main}>
-      <div className={styles.container}>
+    <main>
+      <div style={{width: "100%", maxWidth: "27rem"}}>
         <BackLink href="/" className="fade-in-up" />
 
         <PageHeading>

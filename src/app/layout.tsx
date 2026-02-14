@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Grenze_Gotisch } from "next/font/google";
+import { Footer } from "@/components/ui/Footer";
 import "@/styles/globals.scss";
 import "@/styles/_variables.scss";
 
@@ -49,6 +50,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${oldEnglish.variable}`}
       >
         <div className="page">{children}</div>
+        {/* <Footer /> */}
       </body>
     </html>
   );

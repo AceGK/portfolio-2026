@@ -11,6 +11,8 @@ import {
   Firebase,
   Mongodb,
   Algolia,
+  Leaflet,
+  Swiper,
   Aws,
   Figma,
   Convex,
@@ -24,25 +26,30 @@ export interface Skill {
   icon: ComponentType<SVGProps<SVGSVGElement>>;
 }
 
-// Map skill names to icons (keys should match your project tags)
-export const skillsMap: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
-  TypeScript: Typescript,
-  React: React,
-  "Next.js": Nextjs,
-  "Node.js": Node,
-  SCSS: Sass,
-  Tailwind: Tailwind,
-  Git: Git,
-  Vercel: Vercel,
-  Sanity: Sanity,
-  Firebase: Firebase,
-  MongoDB: Mongodb,
-  Algolia: Algolia,
-  AWS: Aws,
-  Figma: Figma,
-  Convex: Convex,
-  Photoshop: Photoshop,
-  Illustrator: Illustrator,
+// Map skill names to icons and brand colors
+export const skillsMap: Record<string, {
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
+  color?: string;
+}> = {
+  TypeScript: { icon: Typescript, color: "var(--brand-typescript)" },
+  React: { icon: React, color: "var(--brand-react)" },
+  "Next.js": { icon: Nextjs, color: "var(--brand-nextjs)" },
+  "Node.js": { icon: Node, color: "var(--brand-node)" },
+  SCSS: { icon: Sass, color: "var(--brand-sass)" },
+  Tailwind: { icon: Tailwind, color: "var(--brand-tailwind)" },
+  Git: { icon: Git, color: "var(--brand-git)" },
+  Vercel: { icon: Vercel, color: "var(--brand-vercel)" },
+  Sanity: { icon: Sanity, color: "var(--brand-sanity)" },
+  Firebase: { icon: Firebase, color: "var(--brand-firebase)" },
+  MongoDB: { icon: Mongodb, color: "var(--brand-mongodb)" },
+  Algolia: { icon: Algolia, color: "var(--brand-algolia)" },
+  AWS: { icon: Aws, color: "var(--brand-aws)" },
+  Figma: { icon: Figma, color: "var(--brand-figma)" },
+  Convex: { icon: Convex, color: "var(--brand-convex)" },
+  Photoshop: { icon: Photoshop, color: "var(--brand-photoshop)" },
+  Illustrator: { icon: Illustrator, color: "var(--brand-illustrator)" },
+  Leaflet: { icon: Leaflet, color: "var(--brand-leaflet)" },
+  Swiper: { icon: Swiper, color: "var(--brand-swiper)" },
 };
 
 // Grouped skills for the about page
@@ -53,7 +60,7 @@ export const skillGroups = [
   },
   {
     label: "Data",
-    items: ["AWS", "Sanity", "Algolia", "Convex", "Firebase", "MongoDB"],
+    items: ["AWS", "Sanity", "Algolia", "Convex", "Firebase", "MongoDB", "Leaflet"],
   },
   {
     label: "Design",
@@ -62,5 +69,9 @@ export const skillGroups = [
 ];
 
 export function getSkillIcon(name: string) {
-  return skillsMap[name];
+  return skillsMap[name]?.icon;
+}
+
+export function getSkillColor(name: string) {
+  return skillsMap[name]?.color;
 }

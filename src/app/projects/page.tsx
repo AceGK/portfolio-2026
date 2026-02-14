@@ -1,13 +1,12 @@
-import { projects } from "@/lib/projects";
+import { BackLink } from "@/components/ui/BackLink";
 import { ListNav } from "@/components/ui/ListNav";
 import { PageHeading } from "@/components/ui/PageHeading";
-import { BackLink } from "@/components/ui/BackLink";
-import styles from "./styles.module.scss";
+import { projects } from "@/lib/projects";
 
 export default function ProjectsPage() {
   return (
-    <main className={styles.main}>
-      <div className={styles.container}>
+    <main>
+      <div style={{width: "100%", maxWidth: "18rem"}}>
         <BackLink href="/" className="fade-in-up" />
 
         <PageHeading>

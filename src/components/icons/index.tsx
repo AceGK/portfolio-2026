@@ -24,11 +24,14 @@ export {
   SiCss3 as Css,
   SiSass as Sass,
   SiTailwindcss as Tailwind,
+  SiLeaflet as Leaflet,
+  SiSwiper as Swiper,
 
   // Tools & Version Control
   SiGit as Git,
   SiGithub as Github,
   SiVercel as Vercel,
+  SiLinkedin as Linkedin,
 
   // Data & Backend
   SiSanity as Sanity,
@@ -49,9 +52,10 @@ export {
 export { FaAws as Aws } from "react-icons/fa";
 
 // Custom icons
-export const Convex = ({ className }: { className?: string }) => (
+export const Convex = ({ className, style }: { className?: string; style?: React.CSSProperties }) => (
   <svg
     className={className}
+    style={style}
     viewBox="28 28 128 132"
     xmlns="http://www.w3.org/2000/svg"
     fill="currentColor"

@@ -1,4 +1,4 @@
-import s from "./styles.module.scss";
+import styles from "./styles.module.scss";
 
 interface SeparatorProps {
   className?: string;
@@ -8,7 +8,7 @@ interface SeparatorProps {
 export function Separator({ className, style }: SeparatorProps) {
   return (
     <div
-      className={`${s.separator}${className ? ` ${className}` : ""}`}
+      className={`${styles.separator}${className ? ` ${className}` : ""}`}
       style={style}
     />
   );
