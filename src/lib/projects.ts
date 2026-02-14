@@ -94,10 +94,10 @@ export const projects: Project[] = [
     title: "Tipper",
     description: "Tip calculator",
     longDescription:
-      "Tip calculator with bill splitting. Preset tip percentages with custom option, per-person breakdown for group dining.",
+      "Tip calculator with bill splitting. Preset tip percentages with custom options, per-person breakdown.",
     date: "2024",
     image: "/images/tipper.jpg",
-    tags: ["TypeScript", "React"],
+    tags: ["TypeScript", "Next.js"],
     links: {
       site: "https://tipper-ace.vercel.app/",
       github: "https://github.com/acegk/tip-calculator",
