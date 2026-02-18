@@ -10,6 +10,8 @@ import {
   Sanity,
   Firebase,
   Mongodb,
+  Mysql, 
+  Postgresql,
   Algolia,
   Leaflet,
   Swiper,
@@ -42,6 +44,8 @@ export const skillsMap: Record<string, {
   Sanity: { icon: Sanity, color: "var(--brand-sanity)" },
   Firebase: { icon: Firebase, color: "var(--brand-firebase)" },
   MongoDB: { icon: Mongodb, color: "var(--brand-mongodb)" },
+  MySQL: { icon: Mysql, color: "var(--brand-mysql)" },
+  PostgreSQL: { icon: Postgresql, color: "var(--brand-postgresql)" },
   Algolia: { icon: Algolia, color: "var(--brand-algolia)" },
   AWS: { icon: Aws, color: "var(--brand-aws)" },
   Figma: { icon: Figma, color: "var(--brand-figma)" },
@@ -60,7 +64,7 @@ export const skillGroups = [
   },
   {
     label: "Data",
-    items: ["AWS", "Sanity", "Algolia", "Convex", "Firebase", "MongoDB", "Leaflet"],
+    items: ["MongoDB", "MySQL", "PostgreSQL", "AWS", "Convex", "Firebase", "Sanity", "Algolia"],
   },
   {
     label: "Design",
