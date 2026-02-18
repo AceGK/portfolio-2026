@@ -29,7 +29,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <main>
-      <div style={{width: "100%", maxWidth: "29rem"}}>
+      <div style={{width: "100%", maxWidth: "27rem"}}>
         <BackLink
           href="/projects"
           label="back to projects"

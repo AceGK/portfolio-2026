@@ -18,7 +18,7 @@ export const projects: Project[] = [
     title: "Purple Lotus",
     description: "Cannabis e-commerce",
     longDescription:
-      "E-commerce platform for a San Jose cannabis dispensary. Built using Next.js, Sanity CMS, AWS Cognito, Jane Roots headless e-commerce, Algolia Instant Search, Google Maps API, Leaflet.js, and Swiper.js.",
+      "E-commerce platform for a San Jose cannabis dispensary featuring real-time menus, delivery zone mapping, and instant product search.",
     date: "2024",
     image: "/images/purple-lotus.jpg",
     tags: ["TypeScript", "Next.js", "Sanity", "Algolia", "AWS", "Leaflet", "Swiper"],
@@ -41,6 +41,7 @@ export const projects: Project[] = [
       "Sanity",
       "Algolia",
       "Convex",
+      "Swiper"
     ],
     links: {
       site: "https://imperialarchive.com/",
@@ -52,10 +53,10 @@ export const projects: Project[] = [
     title: "The Shire Supply Co.",
     description: "Southfarthing's finest pipe-weed",
     longDescription:
-      "Fictional cannabis brand set in Tolkien's Middle-earth. Complete with strains, retailer map, character reviews, and parody press logos.",
+      "Fictional cannabis brand site set in Tolkien's Middle-earth. Featuring strains, retailer map, character reviews, and parody press logos.",
     date: "2024",
     image: "/images/the-shire.jpg",
-    tags: ["🚧 in progress", "TypeScript", "Next.js", "Leaflet.js"],
+    tags: ["🚧 in progress", "TypeScript", "Next.js", "Leaflet", "Swiper"],
     links: {
       site: "https://the-shire.vercel.app/",
       github: "https://github.com/acegk/the-shire",
