@@ -60,7 +60,7 @@ export const skillsMap: Record<string, {
 export const skillGroups = [
   {
     label: "Dev",
-    items: ["TypeScript", "React", "Next.js", "Node.js", "SCSS", "Tailwind", "Git", "Vercel"],
+    items: ["TypeScript", "React", "Next.js", "Node.js", "SCSS", "Tailwind", "Vercel"],
   },
   {
     label: "Data",
